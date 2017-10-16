@@ -17,7 +17,6 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name',50)->nullable()->comment('Tên sản phẩm');
             $table->integer('brand_id')->unsigned()->nullable()->comment('Tên hãng id');
-            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade')->onUpdate('cascade');
             $table->date('date')->nullable()->comment('Ngày nhập');
             $table->float('price')->nullable()->comment('Giá sản phẩm');
             $table->enum('special',['yes','no'])->nullable()->comment('Sản phẩm đặc biệt');
