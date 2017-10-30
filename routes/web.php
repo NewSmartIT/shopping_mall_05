@@ -11,5 +11,5 @@
 |
 */
 Route::get('test-view',function(){
-    return view('layouts.backend.home');
+    return view('layouts.frontend.home');
 });
