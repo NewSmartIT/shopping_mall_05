@@ -1,21 +1,20 @@
 @extends('layouts.backend.master')
+@section('title', 'Admin')
 @section('content')
-<!--main content start-->
 <section id="main-content">
     <section class="wrapper">
-        <!-- //market-->
         <div class="market-updates">
             <div class="col-md-3 market-update-gd">
                 <div class="market-update-block clr-block-2">
                     <div class="col-md-4 market-update-right">
                         <i class="fa fa-eye"> </i>
                     </div>
-                     <div class="col-md-8 market-update-left">
-                     <h4>Visitors</h4>
-                    <h3>13,500</h3>
-                    <p>Other hand, we denounce</p>
-                  </div>
-                  <div class="clearfix"> </div>
+                    <div class="col-md-8 market-update-left">
+                        <h4>Visitors</h4>
+                        <h3>13,500</h3>
+                        <p>Other hand, we denounce</p>
+                    </div>
+                    <div class="clearfix"> </div>
                 </div>
             </div>
             <div class="col-md-3 market-update-gd">
@@ -24,11 +23,11 @@
                         <i class="fa fa-users" ></i>
                     </div>
                     <div class="col-md-8 market-update-left">
-                    <h4>Users</h4>
+                        <h4>Users</h4>
                         <h3>1,250</h3>
                         <p>Other hand, we denounce</p>
                     </div>
-                  <div class="clearfix"> </div>
+                    <div class="clearfix"> </div>
                 </div>
             </div>
             <div class="col-md-3 market-update-gd">
@@ -41,7 +40,7 @@
                         <h3>1,500</h3>
                         <p>Other hand, we denounce</p>
                     </div>
-                  <div class="clearfix"> </div>
+                    <div class="clearfix"> </div>
                 </div>
             </div>
             <div class="col-md-3 market-update-gd">
@@ -54,18 +53,14 @@
                         <h3>1,500</h3>
                         <p>Other hand, we denounce</p>
                     </div>
-                  <div class="clearfix"> </div>
+                    <div class="clearfix"> </div>
                 </div>
             </div>
-           <div class="clearfix"> </div>
+            <div class="clearfix"> </div>
         </div>
-
         <div class="agil-info-calendar">
-
-        <div class="col-md-6 w3agile-notifications">
-            <div class="notifications">
-                <!--notification start-->
-
+            <div class="col-md-6 w3agile-notifications">
+                <div class="notifications">
                     <header class="panel-heading">
                         Notification
                     </header>
@@ -82,15 +77,11 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>
-
-                <!--notification end-->
                 </div>
             </div>
             <div class="clearfix"> </div>
         </div>
     </section>
 </section>
-<!--main content end-->
 @endsection

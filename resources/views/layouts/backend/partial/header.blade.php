@@ -1,19 +1,12 @@
-<!--header start-->
 <header class="header fixed-top clearfix">
-    <!--logo start-->
     <div class="brand">
-        <a href="index.html" class="logo">
-            FRPHONE
-        </a>
+        <a href="index.html" class="logo">FRPHONE</a>
         <div class="sidebar-toggle-box">
             <div class="fa fa-bars"></div>
         </div>
     </div>
-    <!--logo end-->
     <div class="nav notify-row" id="top_menu">
-        <!--  notification start -->
         <ul class="nav top-menu">
-            <!-- settings start -->
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                     <i class="fa fa-tasks"></i>
@@ -30,20 +23,17 @@
                                     <h5>Target Sell</h5>
                                     <p>25% , Deadline  12 June’13</p>
                                 </div>
-                                        <span class="notification-pie-chart pull-right" data-percent="45">
-                                <span class="percent"></span>
+                                <span class="notification-pie-chart pull-right" data-percent="45">
+                                    <span class="percent"></span>
                                 </span>
                             </div>
                         </a>
                     </li>
-
                     <li class="external">
                         <a href="#">See All Tasks</a>
                     </li>
                 </ul>
             </li>
-            <!-- settings end -->
-            <!-- inbox dropdown start-->
             <li id="header_inbox_bar" class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                     <i class="fa fa-envelope-o"></i>
@@ -56,13 +46,13 @@
                     <li>
                         <a href="#">
                             <span class="photo"><img alt="avatar" src=""></span>
-                                    <span class="subject">
-                                    <span class="from">Jonathan Smith</span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                                    <span class="message">
-                                        Hello, this is an example msg.
-                                    </span>
+                            <span class="subject">
+                                <span class="from">Jonathan Smith</span>
+                                <span class="time">Just now</span>
+                            </span>
+                            <span class="message">
+                                Hello, this is an example msg.
+                            </span>
                         </a>
                     </li>
                     <li>
@@ -70,11 +60,8 @@
                     </li>
                 </ul>
             </li>
-            <!-- inbox dropdown end -->
-            <!-- notification dropdown start-->
             <li id="header_notification_bar" class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-
                     <i class="fa fa-bell-o"></i>
                     <span class="badge bg-warning">3</span>
                 </a>
@@ -86,26 +73,22 @@
                         <div class="alert alert-info clearfix">
                             <span class="alert-icon"><i class="fa fa-bolt"></i></span>
                             <div class="noti-info">
-                                <a href="#"> Server #1 overloaded.</a>
+                                <a href="#">Server #1 overloaded.</a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </li>
-            <!-- notification dropdown end -->
         </ul>
-        <!--  notification end -->
     </div>
     <div class="top-nav clearfix">
-        <!--search & user info start-->
         <ul class="nav pull-right top-menu">
             <li>
-                <input type="text" class="form-control search" placeholder=" Search">
+                <input type="text" class="form-control search" placeholder=" Search"/>
             </li>
-            <!-- user login dropdown start-->
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <img alt="" src="">
+                    <img alt="" src=""/>
                     <span class="username">John Doe</span>
                     <b class="caret"></b>
                 </a>
@@ -115,10 +98,6 @@
                     <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
                 </ul>
             </li>
-            <!-- user login dropdown end -->
-
         </ul>
-        <!--search & user info end-->
     </div>
 </header>
-<!--header end-->
