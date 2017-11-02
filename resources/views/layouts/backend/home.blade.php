@@ -10,9 +10,9 @@
                         <i class="fa fa-eye"> </i>
                     </div>
                     <div class="col-md-8 market-update-left">
-                        <h4>Visitors</h4>
-                        <h3>13,500</h3>
-                        <p>Other hand, we denounce</p>
+                        <h4>{{ trans('backend.visitors') }}</h4>
+                        <h3>{{ trans('backend.number_visitor') }}</h3>
+                        <p>{{-- Other hand, we denounce --}}</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -23,9 +23,9 @@
                         <i class="fa fa-users" ></i>
                     </div>
                     <div class="col-md-8 market-update-left">
-                        <h4>Users</h4>
-                        <h3>1,250</h3>
-                        <p>Other hand, we denounce</p>
+                        <h4>{{ trans('backend.users') }}</h4>
+                        <h3>{{ trans('backend.number_user') }}</h3>
+                        <p>{{-- Other hand, we denounce --}}</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -36,9 +36,9 @@
                         <i class="fa fa-usd"></i>
                     </div>
                     <div class="col-md-8 market-update-left">
-                        <h4>Sales</h4>
-                        <h3>1,500</h3>
-                        <p>Other hand, we denounce</p>
+                        <h4>{{ trans('backend.sales') }}</h4>
+                        <h3>{{ trans('backend.number_sale') }}</h3>
+                        <p>{{-- Other hand, we denounce --}}</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -49,9 +49,9 @@
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                     <div class="col-md-8 market-update-left">
-                        <h4>Orders</h4>
-                        <h3>1,500</h3>
-                        <p>Other hand, we denounce</p>
+                        <h4>{{ trans('backend.orders') }}</h4>
+                        <h3>{{ trans('backend.number_order') }}</h3>
+                        <p>{{-- Other hand, we denounce --}}</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -62,18 +62,20 @@
             <div class="col-md-6 w3agile-notifications">
                 <div class="notifications">
                     <header class="panel-heading">
-                        Notification
+                        {{ trans('backend.notification') }}
                     </header>
                     <div class="notify-w3ls">
                         <div class="alert alert-info clearfix">
                             <span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
                             <div class="notification-info">
                                 <ul class="clearfix notification-meta">
-                                    <li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> send you a mail </li>
-                                    <li class="pull-right notification-time">1 min ago</li>
+                                    <li class="pull-left notification-sender">
+                                        <span><a href="#">{{-- Jonathan Smith --}}</a></span> {{-- send you a mail --}}
+                                    </li>
+                                    <li class="pull-right notification-time">{{-- 1 min ago --}}</li>
                                 </ul>
                                 <p>
-                                    Urgent meeting for next proposal
+                                    {{-- Urgent meeting for next proposal --}}
                                 </p>
                             </div>
                         </div>
