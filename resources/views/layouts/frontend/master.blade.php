@@ -3,42 +3,43 @@
     <head>
         @include('layouts.frontend.meta')
         <title>@yield('title')</title>
-        <link rel="stylesheet" type='text/css' href="{{ Url('css/frontend/font.css') }}">
-        <link rel="stylesheet" type='text/css' href="{{ Url('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" >
-        <link rel="stylesheet" type='text/css' href="{{ Url('bower_components/perfect-scrollbar/css/perfect-scrollbar.css') }}">
-        <link rel="stylesheet" type='text/css' href="{{ Url('css/frontend/style.css') }}">
-        <link rel="stylesheet" type='text/css' href="{{ Url('bower_components/flexslider/flexslider.css') }}" media="screen" />
-        <link rel="stylesheet" type='text/css' href="{{ Url('css/frontend/animation.css') }}">
-        <link rel="stylesheet" type='text/css' href="{{ Url('bower_components/owl.carousel/dist/assets/owl.carousel.css') }}">
-        <link rel="stylesheet" type='text/css' href="{{ Url('css/frontend/owl.theme.css') }}">
-        <link rel="stylesheet" type='text/css' href="{{ Url('bower_components/chosen/chosen.css') }}">
+        {{ Html::style('bower_components/core_frontend/css/fonts.css') }}
+        {{ Html::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
+        {{ Html::style('bower_components/core_frontend/css/perfect-scrollbar.css') }}
+        {{ Html::style('bower_components/core_frontend/css/style.css') }}
+        {{ Html::style('bower_components/core_frontend/css/flexslider.css') }}
+        {{ Html::style('bower_components/core_frontend/css/animation.css') }}
+        {{ Html::style('bower_components/core_frontend/css/owl.carousel.css') }}
+        {{ Html::style('bower_components/core_frontend/css/owl.theme.css') }}
+        {{ Html::style('bower_components/core_frontend/css/chosen.css') }}
         @yield('styles')
     </head>
     <body>
         <div class="container">
             @include('layouts.frontend.partial.header')
-            @yield('content')
-            @include('layouts.frontend.partial.footer')
-            <div id="back-to-top">
-                <i class="icon-up-dir"></i>
+            <div class="row content">
+                @yield('content')
+                @include('layouts.frontend.partial.sidebar')
             </div>
+            @include('layouts.frontend.partial.footer')
         </div>
-        <script src="{{ Url('js/frontend/modernizr.min.js') }}"></script>
-        <script src="{{ Url('bower_components/my-jquery/jquery.js') }}"></script>
-        <script src="{{ Url('bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/jquery.raty.min.js') }}"></script>
-        <script src="{{ Url('bower_components/perfect-scrollbar/js/perfect-scrollbar.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/zoomsl-3.0.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/jquery.fancybox.pack.js') }}"></script>
-        <script src="{{ Url('js/frontend/jquery.themepunch.plugins.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/jquery.themepunch.revolution.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/flexslider.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/jquery.iosslider.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/jquery.nouislider.min.js') }}"></script>
-        <script src="{{ Url('bower_components/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-        <script src="{{ Url('bower_components/chosen/chosen.jquery.min.js') }}" type="text/javascript"></script>
-        <script src="{{ Url('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-        <script src="{{ Url('js/frontend/main-script.js') }}"></script>
+        {{ Html::script('bower_components/core_frontend/js/modernizr.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery-1.11.0.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery-ui.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery.raty.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/perfect-scrollbar.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/zoomsl-3.0.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery.fancybox.pack.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery.themepunch.plugins.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery.themepunch.revolution.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/flexslider.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery.iosslider.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/jquery.nouislider.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/owl.carousel.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/zoomsl-3.0.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/chosen.jquery.min.js') }}
+        {{ Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
+        {{ Html::script('bower_components/core_frontend/js/main-script.js') }}
         @yield('scripts')
     </body>
 </html>

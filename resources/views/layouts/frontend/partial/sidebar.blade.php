@@ -1,42 +1,33 @@
-<aside class="sidebar right-sidebar col-lg-3 col-md-3 col-sm-3 pull-right">
+<aside class="sidebar right-sidebar col-lg-3 col-md-3 col-sm-3">
     <div class="row sidebar-box purple">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="sidebar-box-heading">
                 <i class="icons icon-folder-open-empty"></i>
-                <h4>Categories</h4>
+                <h4>{{ trans('frontend.categories') }}</h4>
             </div>
             <div class="sidebar-box-content">
                 <ul>
-                    <li><a href="#">Cameras &amp; Photography <i class="icons icon-right-dir"></i></a></li>
-                    <li><a href="#">Computers &amp; Tablets <i class="icons icon-right-dir"></i></a></li>
+                    <li><a href="#">{{ trans('frontend.categories_1') }}<i class="icons icon-right-dir"></i></a></li>
                     <li>
-                        <a href="#">Cell Phones &amp; Accessories <i class="icons icon-right-dir"></i></a>
+                        <a href="#">{{ trans('frontend.categories_1') }}<i class="icons icon-right-dir"></i></a>
                         <ul class="sidebar-dropdown">
                             <li>
                                 <ul>
-                                    <li><a href="#">Cell phones &amp; Smartphone</a></li>
-                                    <li><a href="#">Cell Phone Accessories</a></li>
-                                    <li><a href="#">Headsets</a></li>
-                                    <li><a href="#">Cases, Covers Skins</a></li>
-                                    <li><a href="#">Screen Protectors</a></li>
+                                    <li><a href="#">{{ trans('frontend.product_name') }}</a></li>
+                                    <li><a href="#">{{ trans('frontend.product_name') }}</a></li>
+                                    <li><a href="#">{{ trans('frontend.product_name') }}</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
-                                    <li><a href="#">Chargers Cradles</a></li>
-                                    <li><a href="#">Batteries</a></li>
-                                    <li><a href="#">Cables Adapters</a></li>
-                                    <li><a href="#">All About Smartphones</a></li>
+                                    <li><a href="#">{{ trans('frontend.product_name') }}</a></li>
+                                    <li><a href="#">{{ trans('frontend.product_name') }}</a></li>
+                                    <li><a href="#">{{ trans('frontend.product_name') }}</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="#">TV, Audio &amp; Surveillance <i class="icons icon-right-dir"></i></a></li>
-                    <li><a href="#">Video Games &amp; Consoles <i class="icons icon-right-dir"></i></a></li>
-                    <li><a href="#">Car Audio, Video &amp; GPS <i class="icons icon-right-dir"></i></a></li>
-                    <li><a href="#">Best Sellers <i class="icons icon-right-dir"></i></a></li>
-                    <li><a href="#">Shop by Brands <i class="icons icon-right-dir"></i></a></li>
-                    <li><a class="purple" href="#">All Categories</a></li>
+                    <li><a class="purple" href="#">{{ trans('frontend.all_categories') }}</a></li>
                 </ul>
             </div>
         </div>
@@ -45,79 +36,37 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="sidebar-box-heading">
                 <i class="icons icon-docs"></i>
-                <h4>Compare Products</h4>
+                <h4>{{ trans('frontend.compare_products') }}</h4>
             </div>
             <div class="sidebar-box-content">
                 <table class="compare-table">
                     <tr>
-                        <td class="product-thumbnail"><img src="#" alt="Product1"/></td>
+                        <td class="product-thumbnail"><img src="{{ Url('images/sample1.jpg') }}" alt="Product1"></td>
                         <td class="product-info">
-                            <p><a href="#">Lorem ipsum dolor sit amet</a></p>
-                            <a href="#" class="remove">Remove</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="product-thumbnail"><img src="#" alt="Product1"/></td>
-                        <td class="product-info">
-                            <p><a href="#">Lorem ipsum dolor sit amet</a></p>
-                            <a href="#" class="remove">Remove</a>
+                            <p><a href="#">{{ trans('frontend.product_name') }}</a></p>
+                            <a href="#" class="remove">{{ trans('frontend.remove') }}</a>
                         </td>
                     </tr>
                 </table>
                 <div class="padding-box">
-                    <a class="button grey">Go to compare</a>
+                    <a class="button grey">{{ trans('frontend.go_compare') }}</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row sidebar-box">
-        <div class="col-lg-12 col-md-12 col-sm-12 sidebar-carousel">
-            <section class="sidebar-slider">
-                <div class="sidebar-flexslider">
-                    <ul class="slides">
-                        <li>
-                            <a href="#"><img src="#" alt="Slide1"/></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="#" alt="Slide1"/></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="#" alt="Slide1"/></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="slider-nav"></div>
-            </section>
         </div>
     </div>
     <div class="row sidebar-box red">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="sidebar-box-heading">
                 <i class="icons icon-award-2"></i>
-                <h4>Bestsellers</h4>
+                <h4>{{ trans('frontend.bestsellers') }}</h4>
             </div>
             <div class="sidebar-box-content">
                 <table class="bestsellers-table">
                     <tr>
-                        <td class="product-thumbnail"><a href="#"><img src="#" alt="Product1"/></a></td>
+                        <td class="product-thumbnail"><a href="#"><img src="{{ Url('images/sample1.jpg') }}" alt="Product1"></a></td>
                         <td class="product-info">
-                            <p><a href="#">Lorem ipsum dolor sit amet</a></p>
-                            <span class="price">$550.00</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="product-thumbnail"><a href="#"><img src="#" alt="Product1"/></a></td>
-                        <td class="product-info">
-                            <p><a href="#">Lorem ipsum dolor sit amet</a></p>
-                            <span class="price">$550.00</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="product-thumbnail"><a href="#"><img src="#" alt="Product1"/></a></td>
-                        <td class="product-info">
-                            <p><a href="#">Lorem ipsum dolor sit amet</a></p>
-                            <div class="rating readonly-rating" data-score="4"></div>
-                            <span class="price"><del>$650.00</del> $550.00</span>
+                            <p><a href="#">{{ trans('frontend.product_name') }}</a></p>
+                            <span class="price">{{ trans('frontend.product_price') }}</span>
                         </td>
                     </tr>
                 </table>
@@ -128,17 +77,11 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="sidebar-box-heading">
                 <i class="icons icon-tag-6"></i>
-                <h4>Tags Cloud</h4>
+                <h4>{{ trans('frontend.tags_cloud') }}</h4>
             </div>
             <div class="sidebar-box-content sidebar-padding-box">
-                <a href="#" class="tag-item">digital camera</a>
-                <a href="#" class="tag-item">lorem</a>
-                <a href="#" class="tag-item">gps</a>
-                <a href="#" class="tag-item">headphones</a>
-                <a href="#" class="tag-item">ipsum</a>
-                <a href="#" class="tag-item">laptop</a>
-                <a href="#" class="tag-item">smartphone</a>
-                <a href="#" class="tag-item">tv</a>
+                <a href="#" class="tag-item">{{ trans('frontend.tags_name') }}</a>
+                <a href="#" class="tag-item">{{ trans('frontend.tags_name') }}</a>
             </div>
         </div>
     </div>
