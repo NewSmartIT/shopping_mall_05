@@ -1,0 +1,23 @@
+{
+  "name": "shopping_mall_05",
+  "description": "",
+  "main": "",
+  "authors": [
+    "dev_tuan_nm <manhtuanzai@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NewSmartIT/shopping_mall_05",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "https://github.com/twbs/bootstrap.git#^3.3.7",
+    "jquery": "https://github.com/jquery/jquery.git#^3.2.1",
+    "core_frontend": "*",
+    "core_backend": "*"
+  }
+}
