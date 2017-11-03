@@ -96,7 +96,8 @@
                     <li><a href="#"><i class=" fa fa-suitcase"></i>{{ trans('backend.profile') }}</a></li>
                     <li><a href="#"><i class="fa fa-cog"></i>{{ trans('backend.settings') }}</a></li>
                     <li>
-                        <a href="{{ route('logout') }}" id="click-logout">{{ trans('backend.logout') }}</a>
+                        <a href="{{ route('logout') }}" id="click-logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">{{ trans('backend.logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
