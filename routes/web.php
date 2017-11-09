@@ -20,5 +20,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('admin');
     Route::group(['prefix' => 'brand', 'namespace' => 'backend'], function () {
         Route::get('/', 'BrandController@index')->name('admin.brand.index');
+        Route::get('data-brand', ['as' => 'admin.brand.json', 'uses' => 'BrandController@data_json']);
     });
 });

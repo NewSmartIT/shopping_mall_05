@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Repositories\Eloquent;
 use App\Repositories\Contracts\RepositoryInterface;
 use Illuminate\Container\Container as App;

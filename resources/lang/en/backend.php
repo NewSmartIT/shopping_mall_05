@@ -29,4 +29,9 @@ return [
     'title_noti' => 'Notifications',
     'content_noti' => 'Server #1 overloaded.',
     'username' => 'Administrator',
+    'name' => 'name',
+    '#' => '#',
+    'description' => 'description',
+    'action' => 'action',
+    'brand_list' => 'BRAND LIST',
 ];
