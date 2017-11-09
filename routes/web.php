@@ -16,4 +16,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', 'AdminController@index')->name('admin');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', 'AdminController@index')->name('admin');
+    Route::group(['prefix' => 'brand', 'namespace' => 'backend'], function () {
+        Route::get('/', 'BrandController@index')->name('admin.brand.index');
+    });
+});

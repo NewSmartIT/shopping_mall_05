@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App;
 use Illuminate\Support\ServiceProvider;
+use App\Repositories\Contracts\BrandRepositoryInterface;
+use App\Repositories\Eloquent\BrandRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,6 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        App::bind(BrandRepositoryInterface::class, BrandRepository::class);
     }
 }
