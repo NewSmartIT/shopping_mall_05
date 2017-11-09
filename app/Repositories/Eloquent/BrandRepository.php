@@ -11,4 +11,14 @@ class BrandRepository extends Repository implements BrandRepositoryInterface
     {
         return Brand::class;
     }
+
+    public function dataSelect($numrow)
+    {
+        return $this->model->select(
+            [
+                $numrow,
+                'name',
+                'description',
+            ]);
+    }
 }

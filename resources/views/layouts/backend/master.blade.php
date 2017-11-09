@@ -9,6 +9,8 @@
     {{ Html::style('bower_components/core_backend/css/font-awesome.css') }}
     {{ Html::style('bower_components/core_backend/css/morris.css') }}
     {{ Html::style('bower_components/core_backend/css/monthly.css') }}
+    {{ Html::style('bower_components/core_datatable/datatables.min.css') }}
+    @yield('styles')
 </head>
 <body>
     <section id="container">
@@ -25,5 +27,8 @@
     {{ Html::script('bower_components/core_backend/js/jquery.slimscroll.js') }}
     {{ Html::script('bower_components/core_backend/js/jquery.nicescroll.js') }}
     {{ Html::script('bower_components/core_backend/js/jquery.scrollTo.js') }}
+    {{ Html::script('bower_components/core_datatable/datatables.min.js') }}
+    {{ Html::script('js/backend/main.js') }}
+    @yield('scripts')
 </body>
 </html>
