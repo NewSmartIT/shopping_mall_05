@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\backend;
 
 use App\Models\Brand;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Contracts\BrandRepositoryInterface as BrandRepository;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 use Yajra\DataTables\DataTables;
 
 class BrandController extends Controller
@@ -23,7 +25,7 @@ class BrandController extends Controller
         return view('backend.brands.index');
     }
 
-    public function data_json(Request $request)
+    public function dataJson(Request $request)
     {
         $where = [];
         if($request->search['custom']['name']) {
@@ -35,8 +37,12 @@ class BrandController extends Controller
         ->where($where);
 
         $datatables = DataTables::of($brands)
-            ->addColumn('checkbox', function ($data) {})
-            ->addColumn('action', function ($data) {})
+            ->addColumn('checkbox', function ($data) {
+                return view('backend.common.checkbox', ['id' => $data->id]);
+            })
+            ->addColumn('action', function ($data) {
+                return view('backend.common.btn-action', ['destroy' => route('admin.brand.destroy', $data->id)]);
+            })
             ->rawColumns(['rownum', 'checkbox', 'action']);
 
         if ($keyword = $request->get('search')['value']) {
@@ -44,5 +50,38 @@ class BrandController extends Controller
         }
 
         return $datatables->make(true);
+    }
+
+    public function destroy($id)
+    {
+        try {
+            $this->brandRepository->destroy($id);
+            return Response::json([
+                'error' => 0,
+                'message' => 'Successfully deleted 1 record'
+            ]);
+        }catch (QueryException $e) {
+            return Response::json([
+                'error' => 1,
+                'message' => $e
+            ]);
+        }
+
+    }
+
+    public function brandDeletes(Request $request)
+    {
+        try {
+            $this->brandRepository->manyDelete($request->ids);
+            return Response::json([
+                'error' => 0,
+                'message' => 'Successfully deleted '.count($request->ids).' record'
+            ]);
+        }catch (QueryException $e) {
+            return Response::json([
+                'error' => 1,
+                'message' => $e
+            ]);
+        }
     }
 }

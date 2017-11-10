@@ -17,5 +17,7 @@ interface RepositoryInterface
 
     public function update(array $data, $id, $attribute = "id");
 
-    public function delete($id);
+    public function destroy($id);
+
+    public function manyDelete($columns = array('*'));
 }

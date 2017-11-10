@@ -28,6 +28,7 @@
     {{ Html::script('bower_components/core_backend/js/jquery.nicescroll.js') }}
     {{ Html::script('bower_components/core_backend/js/jquery.scrollTo.js') }}
     {{ Html::script('bower_components/core_datatable/datatables.min.js') }}
+    {{ Html::script('bower_components/bootbox.js/bootbox.js') }}
     {{ Html::script('js/backend/main.js') }}
     @yield('scripts')
 </body>
