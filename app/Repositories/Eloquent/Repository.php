@@ -65,8 +65,13 @@ abstract class Repository implements RepositoryInterface
         return $this->model->where($attribute, '=', $id)->update($data);
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         return $this->model->destroy($id);
+    }
+
+    public function manyDelete($columns = array('*'))
+    {
+        return $this->model->destroy($columns);
     }
 }

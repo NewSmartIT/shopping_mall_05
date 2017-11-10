@@ -9,16 +9,21 @@
                         {{ trans('backend.brand_list') }}
                     </div>
                     <div class="row w3-res-tb">
+                            <div class="btn-group pull-right">
+                                <a class="btn btn-success" href=""><i class="fa fa-plus withe"></i>{{ trans('backend.add') }}</a>
+                                <button id="btnDeleteAll" class="btn btn-danger"><i class="fa fa-times withe circular"></i>{{ trans('backend.delete') }}</button>
+                            </div>
                         <div class="col-md-8" style="margin-bottom: 15px;">
-                            {!! Form::open(['method'=>'POST','url'=>route('admin.brand.json'),'id'=>'search-form','class'=>'form-horizontal']) !!}
+                            {!! Form::open(['method'=>'POST', 'url'=>route('admin.brand.json'), 'id'=>'search-form', 'class'=>'form-horizontal']) !!}
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="input-icon right">
-                                            {!! Form::text('name',null,['class'=>'form-control','placeholder'=>'Brand name']) !!}
+                                            {!! Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'Brand name']) !!}
                                         </div>
                                     </div>
                                 </div>
                             {!! Form::close() !!}
+
                         </div>
                     </div>
                     <div class="table-responsive">

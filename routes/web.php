@@ -20,6 +20,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('admin');
     Route::group(['prefix' => 'brand', 'namespace' => 'backend'], function () {
         Route::get('/', 'BrandController@index')->name('admin.brand.index');
-        Route::get('data-brand', ['as' => 'admin.brand.json', 'uses' => 'BrandController@data_json']);
+        Route::get('data', ['as' => 'admin.brand.json', 'uses' => 'BrandController@dataJson']);
+        Route::get('destroy/{id}', ['as' => 'admin.brand.destroy', 'uses' => 'BrandController@destroy']);
+        Route::post('many-delete', ['as' => 'admin.brand.manyDelete', 'uses' => 'BrandController@brandDeletes']);
     });
 });

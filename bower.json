@@ -19,6 +19,7 @@
     "jquery": "https://github.com/jquery/jquery.git#^3.2.1",
     "core_frontend": "*",
     "core_backend": "*",
-    "core_datatable": "*"
+    "core_datatable": "*",
+    "bootbox.js": "https://github.com/makeusabrew/bootbox.git#^4.4.0"
   }
 }

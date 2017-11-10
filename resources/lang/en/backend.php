@@ -34,4 +34,7 @@ return [
     'description' => 'description',
     'action' => 'action',
     'brand_list' => 'BRAND LIST',
+    'add' => 'Add',
+    'delete' => 'Delete',
+    'edit' => 'Edit',
 ];
