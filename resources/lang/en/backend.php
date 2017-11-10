@@ -37,4 +37,10 @@ return [
     'add' => 'Add',
     'delete' => 'Delete',
     'edit' => 'Edit',
+    'msg_add_brand_success' => 'Add Brand Successfully',
+    'msg_add_brand_fail' => 'Add Brand Fail',
+    'add_brand' => 'Add Brand',
+    'save' => 'Save',
+    'close' => 'Close',
+    'close_modal' => '&times;',
 ];

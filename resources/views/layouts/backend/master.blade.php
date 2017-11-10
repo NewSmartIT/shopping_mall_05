@@ -29,6 +29,7 @@
     {{ Html::script('bower_components/core_backend/js/jquery.scrollTo.js') }}
     {{ Html::script('bower_components/core_datatable/datatables.min.js') }}
     {{ Html::script('bower_components/bootbox.js/bootbox.js') }}
+    {{ Html::script('bower_components/jquery-validation/dist/jquery.validate.js') }}
     {{ Html::script('js/backend/main.js') }}
     @yield('scripts')
 </body>

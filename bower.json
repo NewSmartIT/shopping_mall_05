@@ -20,6 +20,7 @@
     "core_frontend": "*",
     "core_backend": "*",
     "core_datatable": "*",
-    "bootbox.js": "https://github.com/makeusabrew/bootbox.git#^4.4.0"
+    "bootbox.js": "https://github.com/makeusabrew/bootbox.git#^4.4.0",
+    "jquery-validation": "https://github.com/jquery-validation/jquery-validation.git#^1.17.0"
   }
 }

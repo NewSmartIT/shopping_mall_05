@@ -41,7 +41,10 @@ class BrandController extends Controller
                 return view('backend.common.checkbox', ['id' => $data->id]);
             })
             ->addColumn('action', function ($data) {
-                return view('backend.common.btn-action', ['destroy' => route('admin.brand.destroy', $data->id)]);
+                return view('backend.common.btn-action', [
+                    'destroy' => route('admin.brand.destroy', $data->id),
+                    'edit' => route('admin.brand.fillData', $data->id)
+                ]);
             })
             ->rawColumns(['rownum', 'checkbox', 'action']);
 
@@ -50,6 +53,39 @@ class BrandController extends Controller
         }
 
         return $datatables->make(true);
+    }
+
+    public function saveBrand(Request $request)
+    {
+        try {
+            $data = $request->except('_token');
+            if (!$request->state) {
+                $this->brandRepository->create([
+                    'name' => $data['name'],
+                    'description' => $data['description'],
+                ]);
+            } else {
+                $this->brandRepository->update([
+                    'name' => $data['name'],
+                    'description' => $data['description'],
+                ], $data['state']);
+            }
+            return Response::json([
+                'status' => true,
+            ]);
+        } catch (QueryException $e) {
+            return Response::json([
+                'status' => false,
+            ]);
+        }
+    }
+
+    public function fillData($id)
+    {
+        if ($id) {
+            $data = $this->brandRepository->find($id);
+            return Response::json($data);
+        }
     }
 
     public function destroy($id)
