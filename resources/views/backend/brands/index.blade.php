@@ -10,7 +10,7 @@
                     </div>
                     <div class="row w3-res-tb">
                             <div class="btn-group pull-right">
-                                <a class="btn btn-success" href=""><i class="fa fa-plus withe"></i>{{ trans('backend.add') }}</a>
+                                <button  class="btn btn-success" data-toggle="modal" data-target="#brand-modal"><i class="fa fa-plus withe"></i>{{ trans('backend.add') }}</button>
                                 <button id="btnDeleteAll" class="btn btn-danger"><i class="fa fa-times withe circular"></i>{{ trans('backend.delete') }}</button>
                             </div>
                         <div class="col-md-8" style="margin-bottom: 15px;">
@@ -23,7 +23,6 @@
                                     </div>
                                 </div>
                             {!! Form::close() !!}
-
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -47,6 +46,7 @@
                 </div>
             </div>
         </section>
+        @include('backend.brands.create-modal')
     </section>
 @endsection
 @section('scripts')

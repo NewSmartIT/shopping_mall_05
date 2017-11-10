@@ -6,7 +6,7 @@ $.ajaxSetup({
 
 var datatable;
 
-function setup_select2_simple(id,plh) {
+function setupSelect2Simple(id, plh) {
     var select =  $('#'+id).select2( {
                     placeholder: plh,
                     allowClear: true
@@ -86,7 +86,7 @@ $('#search-form').find('input').on('keyup change', function () {
 
     submit_search_form = setTimeout(function () {
         $('#search-form').submit();
-    },300);
+    }, 300);
 });
 
 $('.change-search-select2').on('change', function (evt) {
@@ -94,7 +94,7 @@ $('.change-search-select2').on('change', function (evt) {
 
     submit_search_form = setTimeout(function () {
         $('#search-form').submit();
-    },300);
+    }, 300);
 });
 
 $('#search-form').on('submit', function(e) {

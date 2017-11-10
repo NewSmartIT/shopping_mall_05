@@ -40,3 +40,52 @@ $(function () {
         }
     });
 });
+
+$('#frmAddBrand').submit(function (e) {
+    e.preventDefault();
+    if ($('#frmAddBrand').valid()) {
+        var data = $(this).serialize();
+        var url = $(this).data('add-brand-url');
+        $.ajax({
+            method: 'get',
+            url: url,
+            data: data,
+            success: function (resp) {
+                if (resp.status) {
+                    $('#brand-modal').modal('hide');
+                    datatable.ajax.reload();
+                } else {
+                    bootbox.alert('An error has occurred, please contact the Administrator');
+                }
+            }
+
+        });
+    }
+});
+
+$(document.body).on('click', '.edit-item-click', function () {
+    var url = $(this).data('url');
+    $.ajax({
+        method: 'get',
+        url: url,
+        success: function (resp) {
+            $('#brand-modal').find('#name').val(resp.name);
+            $('#brand-modal').find('#description').val(resp.description);
+            $('#brand-modal').find('#state').val(resp.id);
+            $('#brand-modal').modal('show');
+        }
+
+    });
+});
+
+$("#frmAddBrand").validate({
+    errorClass: 'error-msg-validate',
+    rules: {
+        name:{
+            required: true,
+        },
+        description:{
+            required: true,
+        }
+    }
+});
