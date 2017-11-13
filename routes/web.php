@@ -18,6 +18,7 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('admin');
+
     Route::group(['prefix' => 'brand', 'namespace' => 'backend'], function () {
         Route::get('/', 'BrandController@index')->name('admin.brand.index');
         Route::get('data', ['as' => 'admin.brand.json', 'uses' => 'BrandController@dataJson']);
@@ -25,5 +26,10 @@ Route::group(['prefix' => 'admin'], function () {
         Route::any('save-brand', ['as' => 'admin.brand.saveAddBrand', 'uses' => 'BrandController@saveBrand']);
         Route::get('destroy/{id}', ['as' => 'admin.brand.destroy', 'uses' => 'BrandController@destroy']);
         Route::post('many-delete', ['as' => 'admin.brand.manyDelete', 'uses' => 'BrandController@brandDeletes']);
+    });
+
+    Route::group(['prefix' => 'product', 'namespace' => 'backend'], function () {
+        Route::get('/', 'ProductController@index')->name('admin.product.index');
+        Route::get('data', ['as' => 'admin.product.json', 'uses' => 'ProductController@dataJson']);
     });
 });
