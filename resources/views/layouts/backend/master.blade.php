@@ -10,6 +10,8 @@
     {{ Html::style('bower_components/core_backend/css/morris.css') }}
     {{ Html::style('bower_components/core_backend/css/monthly.css') }}
     {{ Html::style('bower_components/core_datatable/datatables.min.css') }}
+    {{ Html::style('bower_components/select2/dist/css/select2.min.css') }}
+    {{ Html::style('css/backend/my-style.css') }}
     @yield('styles')
 </head>
 <body>
@@ -30,6 +32,7 @@
     {{ Html::script('bower_components/core_datatable/datatables.min.js') }}
     {{ Html::script('bower_components/bootbox.js/bootbox.js') }}
     {{ Html::script('bower_components/jquery-validation/dist/jquery.validate.js') }}
+    {{ Html::script('bower_components/select2/dist/js/select2.min.js') }}
     {{ Html::script('js/backend/main.js') }}
     @yield('scripts')
 </body>

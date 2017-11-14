@@ -15,7 +15,7 @@ class ProductRepository extends Repository implements ProductRepositoryInterface
 
     public function dataSelect()
     {
-        return $this->model->select(
+        return $this->model->with('brand')->select(
             [
                 DB::raw('@rownum  := @rownum  + 1 AS rownum'),
                 'id',

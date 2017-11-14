@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repositories\Contracts\ProductRepositoryInterface as ProductRepository;
+use App\Repositories\Contracts\BrandRepositoryInterface as BrandRepository;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
 use Yajra\DataTables\DataTables;
@@ -12,15 +13,20 @@ use Yajra\DataTables\DataTables;
 class ProductController extends Controller
 {
     private $productRepository;
+    private $brandRepository;
 
-    public function __construct(ProductRepository $productRepository)
+    public function __construct(
+        ProductRepository $productRepository,
+        BrandRepository $brandRepository
+    )
     {
         $this->productRepository = $productRepository;
+        $this->brandRepository = $brandRepository;
     }
 
     public function index()
     {
-        return view('backend.product.index');
+        return view('backend.product.index', ['brands' => $this->brandRepository->getListBrandName()]);
     }
 
     public function dataJson(Request $request)

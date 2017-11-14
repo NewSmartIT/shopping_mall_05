@@ -14,9 +14,9 @@
                         <span>{{ trans('backend.list_menu') }}</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="typography.html">{{ trans('backend.products') }}</a></li>
-                        <li><a href="glyphicon.html">{{ trans('backend.categories') }}</a></li>
-                        <li><a href="grids.html">{{-- Grids --}}</a></li>
+                        <li><a href="{{ route('admin.product.index') }}">{{ trans('backend.products') }}</a></li>
+                        <li><a href="{{ route('admin.brand.index') }}">{{ trans('backend.categories') }}</a></li>
+                        <li><a href="#">{{-- Grids --}}</a></li>
                     </ul>
                 </li>
             </ul>

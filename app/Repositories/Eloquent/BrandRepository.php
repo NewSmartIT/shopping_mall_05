@@ -22,4 +22,9 @@ class BrandRepository extends Repository implements BrandRepositoryInterface
                 'description',
             ]);
     }
+
+    public function getListBrandName()
+    {
+        return $this->model->pluck('name', 'id');
+    }
 }

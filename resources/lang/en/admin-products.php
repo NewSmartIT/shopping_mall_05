@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'product_list' => 'PRODUCT LIST',
+    'add' => 'Add',
+    'delete' => 'Delete',
+    '#' => '#',
+    'name' => 'Name',
+    'brand' => 'Brand',
+    'price' => 'Price',
+    'special' => 'Special',
+    'status' => 'Status',
+    'action' => 'Action',
+    'close_modal' => '&times;',
+    'add_brand' => 'Add Brand',
+    'images' => 'Images',
+    'date' => 'Date',
+    'is_special' => 'Yes',
+    'un_special' => 'No',
+    'description' => 'Description',
+    'guarantee' => 'Guarantee',
+    'promotion' => 'Promotion',
+    'save' => 'Save',
+    'close' => 'Close',
+];

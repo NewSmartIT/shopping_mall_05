@@ -1,3 +1,5 @@
+setupSelect2Simple('brandId', '------------------------- Choose Brand -------------------------');
+
 $(function () {
     var url = $('#main-content').data('url');
     datatable = $('#product-table').DataTable({
@@ -17,7 +19,7 @@ $(function () {
             {data: 'checkbox', name: 'checkbox', orderable: false, searchable: false},
             {data: 'rownum', name: 'rownum', orderable: false, searchable: false},
             {data: 'name', name: 'name', orderable: true, searchable: true},
-            {data: 'brand_id', name: 'brand_id', orderable: false, searchable: false},
+            {data: 'brand.name', name: 'brand.name', orderable: false, searchable: false},
             {data: 'price', name: 'price', orderable: false, searchable: false},
             {data: 'special', name: 'special', orderable: false, searchable: false},
             {data: 'status', name: 'status', orderable: false, searchable: false},
